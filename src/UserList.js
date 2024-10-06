@@ -24,14 +24,15 @@ export default function UserList(){
         .catch(error => console.error('Error while fetching Users',error));
     },[]);
 
+
     return(
         <>
         <div>
         <ul>
-              {users.map((user, index) => (
-                <li key={user.login.uuid}>{user.name.first} {user.name.last}</li> // Display first and last names
-              ))}
-            </ul>
+            {users.map((user,index)=>(
+                <li key={user.login.uuid}>{user.name.first} {user.name.last}</li>
+            ))}
+        </ul>
         </div>
         </>
     );
